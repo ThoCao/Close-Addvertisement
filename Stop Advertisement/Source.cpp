@@ -10,13 +10,13 @@ using namespace cv;
 
 int main(int argc, char **argv)
 {
-	HWND hwndDesktop = GetDesktopWindow();
+	CaptureScreen Screen;
 	namedWindow("output", WINDOW_NORMAL);
 	int key = 0;
 
 	while (key != 27)
 	{
-		Mat src = hwnd2mat(hwndDesktop);
+		Mat src = Screen.getImageFromScreenPC();
 		// you can do some image processing here
 		imshow("output", src);
 		key = waitKey(60); // you can change wait time
