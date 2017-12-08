@@ -59,6 +59,8 @@ Mat hwnd2mat(HWND hwnd)
 
 int main(int argc, char **argv)
 {
+
+	/* See new modify from other branch */
 	HWND hwndDesktop = GetDesktopWindow();
 	namedWindow("output", WINDOW_NORMAL);
 	int key = 0;
